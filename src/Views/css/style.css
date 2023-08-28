@@ -1,0 +1,170 @@
+ body{
+    background-image: url('./images/fontTable.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+}
+
+.planTitle{
+    color: rgb(246, 246, 247);
+    font-style: italic;
+    text-decoration: underline 7%;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    text-align: center;
+    text-shadow: 3px 2px 15px rgb(31, 17, 228);
+    animation: slideRight 1s ease-out;
+}
+
+@keyframes slideRight { /*Animación para el título*/
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+form{
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    color: rgba(179, 199, 214, 0.993);
+    font-size:150%;
+    letter-spacing: 1.5px;
+}
+
+form select{
+    /*background-color: rgba(198, 198, 212, 0.877);*/
+    background-color: #000000;
+    color: #000;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 15rem;
+    padding: 5px;
+    margin-top: 10px;
+    font-style: italic;  
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.options{
+background-color: rgba(26, 71, 129, 0.281);
+}
+
+.selects{
+    color: rgb(243, 243, 247);
+    background-color: #474242;
+    margin-left: 30px;
+}
+
+.selects:hover{
+    border: 1px solid #ccc;
+}
+
+.btnVisualizar , .btnAgregarCuenta{
+    margin-left: 30px;
+    height: 100%;
+    align-self: center;
+    margin-top: 4%;
+}
+
+.btnAgregarCuenta{
+    margin-right: 3%;
+    width: 10%;
+}
+
+.btnVisualizar:hover, .btnAgregarCuenta:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.btnEliminar{
+    margin-left: 4%;
+}
+
+#btnReporte{
+    margin-bottom: 6%;
+}
+
+#btnReporte:hover{
+    transition: 500ms;
+    transform: scale(1.05);
+}
+
+.loader {
+    display: none; /*Ocultamos la animación de carga*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(255, 255, 255);
+    border-top-color: #2c08fa;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+  .show-loader .loader {
+    display: block; /*Revelamos el objeto*/
+  }
+  
+  @keyframes spin { /*Inicia la animación de carga*/
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+
+/*Intento de responsive*/
+@media (max-width: 1000px) {
+
+    .container {
+        height: 100vh;
+    }
+
+    form {
+        flex-direction: column;
+        justify-content: center;
+        width: 70vh;
+    }
+
+    form label,
+    form select {
+        width: 100%;
+        margin-bottom: 1vw;
+        margin-right: 0;
+    }
+
+    .opciones {
+        margin-left: 0;
+    }
+
+    .btnVisualizar,
+    .btnAgregarCuenta {
+        margin-left: 10%;
+        width: 40%;
+    }
+
+    .btnAgregarCuenta{
+        margin-left: 13%;
+    }
+    
+}
+
+
+
+
+
+
+

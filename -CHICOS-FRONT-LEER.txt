@@ -1,0 +1,23 @@
+
+- No deben descargar nada, todas las dependencias están en las carpetas de node.
+
+- Abrir consola y ejecutar: npm run dev
+
+- Esto inicia el servidor y la base de datos (y demás servicios).
+
+- Si todo va bien, mostrará por consola: 
+                                        "Server conectado en puerto 3000
+                                         Conexion exitosa".
+                                        
+- Si la conexion a la base de datos les tira error, chequeen el nombre de la base en: src/Database/conexion
+
+- Ustedes van a trabajar dentro de la carpeta 'Views'.
+
+- Dentro de 'Views' pueden crear otras carpetas (Por ejemplo: 'css' y 'js').
+
+- IMPORTANTE: 'index.html' debe estar dentro de la carpeta 'src' junto con 'app.js' (esto para que al ingresar 'localhost:3000' en el navegador, automáticamente cargue ese 'index.html' porque está manejado por los controladores)
+
+- Para consumir las api´s con fetch (o el método que apliquen), tienen las Rutas(URL´s) en 'app.js'.
+
+- En 'src/Views/js' dejamos unos archivos.js de ejemplo que interactuan con 'index.html' y consumen las api´s (son funcionales).
+

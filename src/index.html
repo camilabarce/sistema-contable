@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Views/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../src/Views/css/icons/iconoCuenta.png">   
+    <title>Plan de cuentas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row bg-gradient">
+            <div class="col-md-12 text-center formClass">
+                <h1 class="planTitle">Plan de cuentas</h1>
+
+                <form>
+                    <label for="grupo">Grupo
+                        <select id="grupoSelect" class="selects">
+                            <option class="options"></option> <!-- Option estático para que la opción 'activo' pueda condicionar al bloque -->
+                        </select>
+                     </label>   
+
+                    <label for="bloque">Bloque
+                        <select id="bloqueSelect" class="selects"></select>
+                    </label>
+
+                    <label for="rubro">Rubro
+                        <select id="rubroSelect" class="selects"></select>
+                    </label>
+
+                    <input type="button" value="Visualizar" class="btnVisualizar btn btn-primary" id="btnVisualizar">
+                    <input type="button" value="Agregar" class="btnAgregarCuenta btn btn-success" id="btnAgregarCuenta">
+                </form> 
+
+            </div>
+            <div class="col-md-12">
+                <table id="table" class="table table-dark table-striped text-center">
+                    <thead> <!-- Cabeceras --> 
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Cuenta</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Saldo</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo"> <!-- Cuerpo de la tabla dónde se insertarán las cuentas --> 
+
+                    </tbody>
+                </table>
+            </div>
+            <div id="btnReporte" class="d-grid gap-2 col-6 mx-auto">
+                <div id="loader" class="loader"></div> <!--Animación de carga al generar reporte-->
+            </div> <!-- Acá insertamos el botón para descargar el plan de cuentas -->
+        </div>
+    </div>
+
+    <script src="./Views/js/llenarSelects.js"></script> <!--Script que rellena los <option> y condiciona los <select> --> 
+    <script src="./Views/js/mostrarCuentas.js"></script> <!--Script que muestra, agrega, modifica y elimina cuentas -->
+</body>
+
+</html>
